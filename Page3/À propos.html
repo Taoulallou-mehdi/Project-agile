@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/preloader.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link id='favicon' rel="shortcut icon" href="assets/images/favicon.png" type="image/x-png">
+    
     <style>
         body.dark-mode {
             background-color: #121212;
@@ -97,10 +98,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#home">Accueil</a>
+                    <a class="nav-link" href="../Home/index.html">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
+                    <a class="nav-link" href="../Services/Services.html">Services</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#about">À propos de nous</a>
@@ -122,6 +123,64 @@
         <h1>À propos de nous</h1>
         <p>Chez 3DPrint4Me, nous sommes passionnés par l'innovation et la créativité. Notre objectif est de fournir des solutions d'impression 3D de haute qualité adaptées à vos besoins spécifiques. Avec une équipe d'experts et des équipements de pointe, nous garantissons des résultats exceptionnels pour vos projets.</p>
     </div>
+    <!-- Section Vidéos Explicatives -->
+<div class="about-section" id="videos">
+    <h1>Vidéos Explicatives</h1>
+    <p>Apprenez-en plus sur nos processus grâce à ces vidéos explicatives.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+        <div style="text-align: center;">
+            <video controls style="max-width: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+                <source src="assets/videos/video1.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video>
+            <p>Vidéo 1 : Présentation de notre projet.</p>
+        </div>
+        <div style="text-align: center;">
+            <video controls style="max-width: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+                <source src="assets/videos/video2.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video>
+            <p>Vidéo 2 : Processus d'impression 3D.</p>
+        </div>
+    </div>
+</div>
+<!-- Section Galerie -->
+<div class="about-section" id="gallery">
+    <h1>Galerie du Projet</h1>
+    <p>Voici quelques photos illustrant notre travail.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+        <div style="text-align: center;">
+            <img src="assets/images/photo1.jpg" alt="Projet 1" style="max-width: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+            <p>Prototype imprimé (Projet 1).</p>
+        </div>
+        <div style="text-align: center;">
+            <img src="assets/images/photo2.jpg" alt="Projet 2" style="max-width: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+            <p>Création personnalisée (Projet 2).</p>
+        </div>
+        <div style="text-align: center;">
+            <img src="assets/images/photo3.jpg" alt="Projet 3" style="max-width: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+            <p>Assemblage final (Projet 3).</p>
+        </div>
+    </div>
+</div>
+<!-- Section Témoignages -->
+<div class="about-section" id="testimonials" style="background-color: #f9f9f9; padding: 40px;">
+    <h1>Témoignages</h1>
+    <p>Voici ce que disent nos utilisateurs ou partenaires :</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+        <div style="max-width: 300px; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <p>"3DPrint4Me a révolutionné notre manière de travailler, nous permettant de prototyper rapidement nos idées."</p>
+            <p style="text-align: right;">- Partenaire A</p>
+        </div>
+        <div style="max-width: 300px; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <p>"Une équipe professionnelle et des résultats exceptionnels !"</p>
+            <p style="text-align: right;">- Utilisateur B</p>
+        </div>
+    </div>
+</div>
+
+
+
 
     <!-- Section Équipe -->
     <div class="team-section">
@@ -146,13 +205,57 @@
         </div>
     </div>
     
-    <!-- Footer Section -->
-    <footer style="background-color: #121212; color: #ffffff; padding: 20px 0; text-align: center; margin-top: 20px;">
+    <footer style="background-color: #121212; color: white; padding: 40px 20px;">
         <div class="container">
-            <h4 style="font-family: 'Poppins', sans-serif; margin-bottom: 10px;">Contactez-nous</h4>
-            <p style="margin: 0; font-size: 16px;">📞 Téléphone : +212 661 785 595</p>
-            <p style="margin: 0; font-size: 16px;">📧 Email : <a href="mailto:3DPrint4Me@gmail.com" style="color: #1e90ff; text-decoration: none;">3DPrint4Me@gmail.com</a></p>
-            <p style="margin: 0; font-size: 16px;">📍 Adresse : Fès, Maroc</p>
+            <div class="row">
+                <!-- Navigation Links -->
+                <div class="col-md-3">
+                    <h5>Navigation</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="../Home/index.html" style="color: white; text-decoration: none;">Accueil</a></li>
+                        <li><a href="#services" style="color: white; text-decoration: none;">Services</a></li>
+                        <li><a href="#about" style="color: white; text-decoration: none;">À propos de nous</a></li>
+                        <li><a href="#gallery" style="color: white; text-decoration: none;">Galerie</a></li>
+                        <li><a href="#contact" style="color: white; text-decoration: none;">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Information -->
+                <div class="col-md-3">
+                    <h5>Contact</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><i class="fas fa-envelope"></i> contact@3dprint4me.com</li>
+                        <li><i class="fas fa-phone"></i> +212 6 00 97 00 14</li>
+                        <li><i class="fas fa-map-marker-alt"></i>   Fes, Maroc</li>
+                    </ul>
+                </div>
+    
+                <!-- Social Media Links -->
+                <div class="col-md-3">
+                    <h5>Suivez-nous</h5>
+                    <div>
+                        <a href="#" style="color: rgb(255, 255, 255); margin-right: 10px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Additional Information -->
+                <div class="col-md-3">
+                    <h5>Ressources</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: white; text-decoration: none;">FAQs</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Termes et Conditions</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Politique de Confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Footer Bottom -->
+            <div style="text-align: center; margin-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px;">
+                <p>© 2024 3DPrint4Me. Tous droits réservés.</p>
+            </div>
         </div>
     </footer>
 

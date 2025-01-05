@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fr" light-mode="dark">
+
+<head>
+    <title>3DPrint4Me | Accueil</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="impression 3D, site portfolio, open source, projets" />
+    <meta name="description" content="Ce projet propose un modèle de portfolio gratuit et attrayant pour tout le monde. Vous pouvez y présenter vos travaux, projets, expériences, etc., au monde entier." />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="assets/css/preloader.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link id='favicon' rel="shortcut icon" href="assets/images/favicon.png" type="image/x-png">
+
+    <li class="nav-item">
+        <a class="nav-link" href="a_propos.html">À propos de nous</a>
+    </li>
+    <style>
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+            position: fixed;
+        }
+
+        .navbar-dark-mode {
+            background-color: #1f1f1f !important;
+            
+        }
+
+        .navbar-light-mode {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa !important;
+        }
+
+        .button-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .button-section button {
+            margin: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button-section button:hover {
+            background-color: #333;
+        }
+
+        .materials-section {
+            background-color: #121212;
+            color: #fff;
+            padding: 50px 20px;
+        }
+
+        .material {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .material img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .material h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .material p {
+            font-size: 14px;
+        }
+
+        .details-section {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .details-section.active {
+            display: block;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.1);
+        }
+
+        .image-wrapper:hover .description-overlay {
+            opacity: 1;
+        }
+
+        #gallery {
+            background: black;
+            padding: 50px 20px;
+            color: white;
+        }
+
+        #gallery h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        #gallery .col-md-4 {
+            margin-bottom: 20px;
+        }
+
+        #gallery .image-wrapper {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        #gallery img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        #gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        #new-section {
+     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1.9)), 
+    url('assets/images/3Dbackground.jpg') center/cover no-repeat;
+    position: relative;
+    color: white;
+    padding: 520px 50px;
+    text-align: center;
+}
+
+        .video-section {
+            background-color: white;
+            color: black;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .video-section video {
+            max-width: 70%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            margin: 20px auto;
+        }
+
+        .video-section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 43px;
+            margin-top: 20px;
+            color: black;
+            background-color: white;
+            display:flex ;
+            flex-direction: row;
+            justify-content: center;
+
+            padding: 100px 20px;
+            border-radius: 5px;
+        
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-light-mode" id="navbar">
+        
+        <a class="navbar-brand" href="#">
+            <img src="assets/images/favicon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            3DPrint4Me
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../Home/index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Services/Services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Page3/À propos.html">À propos de nous</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">Galerie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Effet de particules -->
+    <div id="home" style="background-color: black; color: white; background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)); padding: 20px;">
+        <section class="center">
+            <div id="particles-js"></div>
+        </section>
+    </div>
+
+    <center>
+        <div class="text col-sm-6" style="margin-top: 140px;">
+            Bienvenue sur <span class="header">3DPrint4Me</span>
+            <div class="center">
+                <div>
+                    <img src="assets/images/favicon.png" alt="" class="rounded-circle" height="200" width="200">
+                </div>
+                <br />
+                <span style="display: inline;"> <span class="animated-text" data-words="Impression 3D, Filaments"></span></span>
+            </div>
+        </div>
+    </center>
+
+<!-- Button Section Update -->
+<div class="button-section">
+    <button class="btn btn-primary" onclick="showDetails('printer-details')">Impression 3D Métal</button>
+    <button class="btn btn-primary" onclick="showDetails('materials-details')">Matériaux Métaux</button>
+    <button class="btn btn-primary" onclick="showDetails('plastic-materials-details')">Matériaux Plastiques</button>
+</div>
+
+
+    <!-- Détails de l'imprimante 3D -->
+    <div id="printer-details" class="details-section">
+        <h2 class="text-center">Impression 3D Métal</h2>
+        <ul>
+            <li><strong>Métal :</strong> Acier inoxydable, Inconel, Cuivre et autres alliages.</li>
+            <li><strong>Processus d'impression :</strong> Metal FFF</li>
+            <li><strong>Résolution des couches Z :</strong> 85 µm - 170 µm (Post-Sinter)</li>
+            <li><strong>Média d'impression :</strong> Filament en poudre liée</li>
+            <li><strong>Géométrie interne des pièces :</strong> Remplissage en cellules fermées (triangulaires) ou pièces solides</li>
+            <li><strong>Plateau d'impression :</strong> Chauffé, auto-nivelant, feuilles d'impression remplaçables</li>
+            <li><strong>Dimensions physiques :</strong>
+                <ul>
+                    <li>Largeur : 575 mm</li>
+                    <li>Profondeur : 467 mm</li>
+                    <li>Hauteur : 1120 mm</li>
+                    <li>Poids : 75 kg / 165 lbs</li>
+                </ul>
+            </li>
+            <li><strong>Volume de construction :</strong>
+                <ul>
+                    <li>Largeur : 300 mm</li>
+                    <li>Profondeur : 220 mm</li>
+                    <li>Hauteur : 180 mm</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Détails des matériaux -->
+    <div id="materials-details" class="details-section">
+        <h2 class="text-center">Matériaux Métaux </h2>
+        <ul>
+            <li><strong>Matériaux Compatibles :</strong>
+                <ul>
+                    <li>17-4PH Acier inoxydable</li>
+                    <li>Cuivre</li>
+                    <li>Acier à outils H13</li>
+                    <li>Inconel 625</li>
+                    <li>Acier à outils A2 et D2</li>
+                </ul>
+            </li>
+            <li><strong>Matériau de libération :</strong> Céramique — Devient poudre pendant le processus de frittage</li>
+            <li><strong>Média (Bobines) :</strong> Filament en poudre métallique liée</li>
+        </ul>
+    </div>
+
+    <div id="plastic-materials-details" class="details-section">
+        <h2 class="text-center">Matériaux Plastiques</h2>
+        <ul>
+            <li><strong>Matériaux Compatibles :</strong>
+                <ul>
+                    <li>Nylon 12</li>
+                    <li>PLA (Acide Polylactique)</li>
+                    <li>ABS (Acrylonitrile Butadiène Styrène)</li>
+                    <li>PC (Polycarbonate)</li>
+                    <li>TPU (Polyuréthane Thermoplastique)</li>
+                </ul>
+            </li>
+            <li><strong>Propriétés :</strong>
+                <ul>
+                    <li>Nylon 12 : Excellente résistance chimique et mécanique, idéal pour les prototypes fonctionnels.</li>
+                    <li>PLA : Écologique, biodégradable, facile à imprimer.</li>
+                    <li>ABS : Résistant aux chocs, idéal pour les pièces mécaniques.</li>
+                    <li>PC : Transparent, haute résistance thermique et mécanique.</li>
+                    <li>TPU : Flexible, résistant à l'usure, parfait pour les pièces souples.</li>
+                </ul>
+            </li>
+            <li><strong>Média :</strong> Filaments plastiques standards de 1,75 mm ou 2,85 mm.</li>
+        </ul>
+    </div>
+
+    <!-- Section des matériaux -->
+    <section class="materials-section container mt-5">
+        <h2 class="text-center">Matériaux  Métaux Compatibles</h2>
+        <div class="row mt-4">
+            <div class="col-md-3 material">
+                <img src="assets/images/17-4PH.jpg" alt="">
+                <h3>17-4PH Acier inoxydable</h3>
+                <p>Combine haute résistance, résistance à la corrosion et dureté. Utilisé dans une large gamme d'applications de fabrication.</p>
+                <img src="assets/images/17-4ph-stainless-steel-spool-hover_2x.png" alt="Bobine 17-4PH" style="transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div class="col-md-3 material">
+                <img src="assets/images/A2-D2.jpg" alt="">
+                <h3>Acier à outils A2 et D2</h3>
+                <p>Les aciers à outils durcissables à l'air — A2 peut être durci à l'air jusqu'à 50 HRC et D2 jusqu'à 55 HRC. Idéal pour les matrices et outils de coupe.</p>
+                <img src="assets/images/d2-tool-steel-spool-hover_2x.png" alt="Bobine A2 et D2" style="transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div class="col-md-3 material">
+                <img src="assets/images/Inconel625.jpg" alt="">
+                <h3>Inconel 625</h3>
+                <p>Un alliage nickel-chrome qui excelle dans les environnements à haute température et corrosifs. Utilisé dans l'automobile et l'aérospatiale.</p>
+                <img src="assets/images/inconel-spool-hover_2x.png" alt="Bobine Inconel 625" style="transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div class="col-md-3 material">
+                <img src="assets/images/Copper.jpg" alt="">
+                <h3>Cuivre</h3>
+                <p>Combine conductivité thermique et électrique. Idéal pour les dissipateurs de chaleur et les pièces complexes géométriquement.</p>
+                <img src="assets/images/copper-spool-hover_2x.png" alt="Bobine de cuivre" style="transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+        </div>
+    </section>  
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
+    <script src="assets/js/particle.js"></script>
+    <script>
+        // Afficher les détails des sections
+        function showDetails(sectionId) {
+            const sections = document.querySelectorAll('.details-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+    <!-- Nouvelle section -->
+    <section id="additional-materials" style="background-color: white; padding: 200px 20px; text-align: center;">
+        <h2 style="font-family: 'Poppins', sans-serif; font-size: 38px; font-weight: normal; color: black;">De l'acier inoxydable au cuivre, choisissez parmi une large gamme de matériaux solides, durables et performants.</h2>
+    </section>
+    <div style="text-align: center; padding: 10px; font-family: 'Poppins', sans-serif; font-size: 36px; color: black; background-color: white;">
+        Flux de travail simple et sécurisé conçu pour toute entreprise.
+    </div>
+    <div style="text-align: center; padding: 20px; background-color: white;">
+        <img src="assets/images/3D_Prining_Materials_Process_MetalX_slim.jpg" alt="3D Printing Materials Process" style="max-width: 100%; height: auto; margin-top: 0px; box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2); border-radius: 20px;">
+    </div>
+
+     <!-- New Section -->
+     <section id="new-section">
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Simple, mais puissant</h3>
+                    <p>3DPrint4Me simplifie vos projets avec des solutions d'impression 3D performantes. Créez facilement des pièces de qualité professionnelle adaptées à tous vos besoins.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Dur et abordable</h3>
+                    <p>3DPrint4Me offre des solutions fiables et accessibles pour tous. Profitez d'une impression 3D sécurisée à un coût compétitif, sans compromis sur la qualité.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Des pièces de qualité</h3>
+                    <p>Avec 3DPrint4Me, obtenez des pièces robustes et précises, conçues pour répondre aux exigences les plus élevées.</p>
+                </div>
+            </div>
+
+        </div>
+        
+    
+</div> 
+</section>
+<section class="video-section">
+    <video autoplay loop muted>
+        <source src="assets/videos/3dprint1.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture de vidéos.
+    </video>
+    <h2>"Transformer vos idées en réalité."</h2>
+</section>
+
+
+ 
+</section>
+    <footer style="background-color: #121212; color: white; padding: 40px 20px;">
+        <div class="container">
+            <div class="row">
+                <!-- Navigation Links -->
+                <div class="col-md-3">
+                    <h5>Navigation</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#home" style="color: white; text-decoration: none;">Accueil</a></li>
+                        <li><a href="#services" style="color: white; text-decoration: none;">Services</a></li>
+                        <li><a href="#about" style="color: white; text-decoration: none;">À propos de nous</a></li>
+                        <li><a href="#gallery" style="color: white; text-decoration: none;">Galerie</a></li>
+                        <li><a href="#contact" style="color: white; text-decoration: none;">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Information -->
+                <div class="col-md-3">
+                    <h5>Contact</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><i class="fas fa-envelope"></i> contact@3dprint4me.com</li>
+                        <li><i class="fas fa-phone"></i> +212 6 00 97 00 14</li>
+                        <li><i class="fas fa-map-marker-alt"></i>   Fes, Maroc</li>
+                    </ul>
+                </div>
+    
+                <!-- Social Media Links -->
+                <div class="col-md-3">
+                    <h5>Suivez-nous</h5>
+                    <div>
+                        <a href="#" style="color: rgb(255, 255, 255); margin-right: 10px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: white; margin-right: 10px;"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Additional Information -->
+                <div class="col-md-3">
+                    <h5>Ressources</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: white; text-decoration: none;">FAQs</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Termes et Conditions</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Politique de Confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Footer Bottom -->
+            <div style="text-align: center; margin-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px;">
+                <p>© 2024 3DPrint4Me. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+
+</html>

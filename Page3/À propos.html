@@ -2,7 +2,7 @@
 <html lang="fr" light-mode="dark">
 
 <head>
-    <title>3DPrint4Me | À propos de nous</title>
+    <title>3DPrint4Me | À propos de nous</title>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="impression 3D, site portfolio, open source, projets" />
@@ -40,10 +40,20 @@
             margin-bottom: 30px;
         }
         .about-section img {
-            max-width: 80%;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+    width: 300px; /* Taille fixe des images */
+    height: 200px; /* Taille fixe des images */
+    object-fit: cover; /* Ajuste l'image sans déformation */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
+}
+
+.about-section img:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'image */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée */
+}
+
+
         .team-section {
             padding: 50px 20px;
             background-color: #121212;
@@ -82,6 +92,69 @@
             font-size: 14px;
             color: #ccc;
         }
+      /* Style par défaut pour les vidéos */
+.video-container video, 
+.video-container iframe {
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
+}
+
+/* Style au survol */
+.video-container video:hover, 
+.video-container iframe:hover {
+    transform: scale(1.05); /* Zoom léger */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée */
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.timeline-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content {
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-icon {
+    transform: scale(1.2);
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-item:hover .timeline-content {
+    background-color: #f1f1f1;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
     </style>
 </head>
 
@@ -110,7 +183,7 @@
                     <a class="nav-link" href="#gallery">Galerie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="../Page4/index.html">Contact</a>
                 </li>
             </ul>
         </div>
@@ -123,42 +196,62 @@
         <h1>À propos de nous</h1>
         <p>Chez 3DPrint4Me, nous sommes passionnés par l'innovation et la créativité. Notre objectif est de fournir des solutions d'impression 3D de haute qualité adaptées à vos besoins spécifiques. Avec une équipe d'experts et des équipements de pointe, nous garantissons des résultats exceptionnels pour vos projets.</p>
     </div>
-    <!-- Section Vidéos Explicatives -->
-<div class="about-section" id="videos">
-    <h1>Vidéos Explicatives</h1>
-    <p>Apprenez-en plus sur nos processus grâce à ces vidéos explicatives.</p>
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-        <div style="text-align: center;">
-            <video controls style="max-width: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
-                <source src="assets/videos/video1.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la vidéo.
-            </video>
-            <p>Vidéo 1 : Présentation de notre projet.</p>
-        </div>
-        <div style="text-align: center;">
-            <video controls style="max-width: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
-                <source src="assets/videos/video2.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la vidéo.
-            </video>
-            <p>Vidéo 2 : Processus d'impression 3D.</p>
+    <!--Section Notre histoire-->
+    <div class="about-section" id="timeline" style="background-color: #f9f9f9; padding: 40px;">
+        <h1>Notre Histoire</h1>
+        <p>Découvrez les étapes marquantes de notre aventure.</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">2023</div>
+                <div class="timeline-content">L'idée de 3DPrint4Me a vu le jour dans notre classe de projet.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">2024</div>
+                <div class="timeline-content">Développement des premiers prototypes avec des résultats prometteurs.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">2025</div>
+                <div class="timeline-content">Lancement officiel de notre service 3DPrint4Me.</div>
+            </div>
         </div>
     </div>
-</div>
+    <!--Section Video Explicatifs-->
+    <div class="about-section" id="videos">
+        <h1>Vidéos Explicatives</h1>
+        <p>Apprenez-en plus sur nos processus grâce à ces vidéos explicatives.</p>
+        <div class="video-container" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+            <!-- Vidéo locale -->
+            <div style="text-align: center;">
+                <video controls>
+                    <source src="assets/videos/video1.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+                <p>Vidéo 1 : Présentation de notre projet.</p>
+            </div>
+            
+            <!-- Vidéo YouTube -->
+            <div style="text-align: center;">
+                <iframe src="https://www.youtube.com/embed/WkjyjxTcrec" frameborder="0" allowfullscreen></iframe>
+                <p>Vidéo 2 : Processus complet d'impression 3D.</p>
+            </div>
+        </div>
+    </div>
+    
 <!-- Section Galerie -->
 <div class="about-section" id="gallery">
     <h1>Galerie du Projet</h1>
     <p>Voici quelques photos illustrant notre travail.</p>
     <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
         <div style="text-align: center;">
-            <img src="assets/images/photo1.jpg" alt="Projet 1" style="max-width: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+            <img src="assets/images/Photoype.jpg" alt="Projet 1" style="max-width: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
             <p>Prototype imprimé (Projet 1).</p>
         </div>
         <div style="text-align: center;">
-            <img src="assets/images/photo2.jpg" alt="Projet 2" style="max-width: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+            <img src="assets/images/Creation personaliser.jpg" alt="Projet 2" style="max-width: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
             <p>Création personnalisée (Projet 2).</p>
         </div>
         <div style="text-align: center;">
-            <img src="assets/images/photo3.jpg" alt="Projet 3" style="max-width: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+            <img src="assets/images/Assemblage finale.jpg" alt="Projet 3" style="max-width: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
             <p>Assemblage final (Projet 3).</p>
         </div>
     </div>
@@ -189,18 +282,22 @@
             <div class="col-md-3 team-member">
                 <img src="assets/images/research-page/Aymane.jpg" alt="Membre de l'équipe">
                 <h4>Aymane Ouazer</h4>
+                <p>Développeur front-end, chargé de créer une expérience utilisateur optimale.</p>
             </div>
             <div class="col-md-3 team-member">
                 <img src="assets/images/research-page/KHALID.jpg" alt="Membre de l'équipe">
                 <h4>Khalid Ibensselam</h4>
+                <p>Développeur back-end et architecte des solutions logicielles.</p>
             </div>
             <div class="col-md-3 team-member">
                 <img src="assets/images/research-page/TAOULLALOU.jpg" alt="Membre de l'équipe">
                 <h4>Mehdi Taoulallou</h4>
+                <p>Responsable du projet, spécialisé dans la gestion et la conception de modèles 3D.</p>
             </div>
             <div class="col-md-3 team-member">
                 <img src="assets/images/research-page/hamza.jpg" alt="Membre de l'équipe">
                 <h4>Hamza Hacham</h4>
+                <p>Expert en matériaux et processus d'impression 3D.</p>
             </div>
         </div>
     </div>
@@ -251,7 +348,27 @@
                     </ul>
                 </div>
             </div>
-    
+            <div class="about-section" id="join-team" style="background-color: #121212; padding: 40px;">
+                <h1 style="color: #fff;">Rejoignez-nous</h1>
+                <p style="color: #ccc;">Vous souhaitez collaborer avec nous ou apporter vos idées ? Remplissez le formulaire ci-dessous !</p>
+                <form action="process_form.php" method="post" style="max-width: 500px; margin: 0 auto;">
+                    <div style="margin-bottom: 20px;">
+                        <label for="name" style="display: block; color: #fff;">Nom complet :</label>
+                        <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border-radius: 4px; background-color: #1f1f1f; color: #fff; border: 1px solid #555;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label for="email" style="display: block; color: #fff;">Adresse e-mail :</label>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border-radius: 4px; background-color: #1f1f1f; color: #fff; border: 1px solid #555;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label for="message" style="display: block; color: #fff;">Message :</label>
+                        <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 10px; border-radius: 4px; background-color: #1f1f1f; color: #fff; border: 1px solid #555;"></textarea>
+                    </div>
+                    <button type="submit" style="padding: 10px 20px; background-color: #fff; color: #121212; border: none; border-radius: 4px; cursor: pointer;">
+                        Envoyer
+                    </button>
+                </form>
+            </div>
             <!-- Footer Bottom -->
             <div style="text-align: center; margin-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px;">
                 <p>© 2024 3DPrint4Me. Tous droits réservés.</p>

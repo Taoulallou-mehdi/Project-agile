@@ -1,9 +1,9 @@
 AOS.init();
-/* Project Cards */
+/* services Cards */
 
 const projectcards = document.querySelector(".projectcards");
 
-// Array of object for projects
+// Array of object for services
 const projects = [
   {
     title: "Services de conception sur mesure",
@@ -103,7 +103,7 @@ const projects = [
   },
 ];
 
-// function for rendering project cards data
+// function for rendering services cards data
 const showCards = () => {
   let output = "";
   projects.forEach(({ title, cardImage, Previewlink, Githublink }) => {
